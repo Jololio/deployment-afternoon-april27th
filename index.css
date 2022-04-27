@@ -3,3 +3,8 @@ body > div {
     height: 1200px;
 }
 
+#skydiving-image {
+    position: absolute;
+    width: 900px;
+    height: 700px;
+}
