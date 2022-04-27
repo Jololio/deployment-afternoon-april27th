@@ -3,8 +3,18 @@ const path = require('path')
 
 const app = express()
 
-app.get('/js', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../index.html'))
 })
 
-app.use('/js', express.static(path.join(__dirname, 'server/index.js')))
+// app.get('/js', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../index.html'))
+// })
+
+// app.use('/js', express.static(path.join(__dirname, 'server/index.js')))
+
+const port = process.env.PORT || 4005
+
+app.listen(port, () =>{
+    console.log(`Listening on port ${port}`)
+})
